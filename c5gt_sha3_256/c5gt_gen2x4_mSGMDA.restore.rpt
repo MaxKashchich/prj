@@ -1,0 +1,76 @@
+Restore Archived Project report for c5gt_gen2x4_mSGMDA
+Fri Mar 02 11:28:00 2018
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Fri Mar 02 11:28:00 2018 ;
+; Revision Name                   ; c5gt_gen2x4_mSGMDA                    ;
+; Top-level Entity Name           ; math                                  ;
+; Family                          ; Cyclone V                             ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/Users/mkashchych/Downloads/c5gt_math_test/c5gt_gen2x4_mSGMDA_tmp_archive.qar' into the 'C:/Users/mkashchych/Downloads/c5gt_math_test_copy/' directory
+Info: Generated report 'c5gt_gen2x4_mSGMDA.restore.rpt'
+
+
++--------------------------------------------+
+; Files Restored                             ;
++--------------------------------------------+
+; File Name                                  ;
++--------------------------------------------+
+; qar_info.json                              ;
+; c5gt_gen2x4_mSGMDA.qpf                     ;
+; c5gt_gen2x4_mSGMDA.qsf                     ;
+; c5gt_gen2x4_mSGMDA_assignment_defaults.qdf ;
+; c5gt_pcie_gen2x4.v                         ;
+; math.vhd                                   ;
+; stp1.stp                                   ;
+; top.sdc                                    ;
++--------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

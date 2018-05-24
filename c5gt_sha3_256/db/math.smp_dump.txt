@@ -1,0 +1,6 @@
+
+State Machine - |test_top|math:u1|FSM_state
+Name FSM_state.squeez FSM_state.absorb FSM_state.idle 
+FSM_state.idle 0 0 0 
+FSM_state.absorb 0 1 1 
+FSM_state.squeez 1 0 1 

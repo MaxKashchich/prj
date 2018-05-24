@@ -1,0 +1,239 @@
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
+
+entity math is
+	Port (clk					: in  STD_LOGIC;
+			data_in				: in  unsigned(255 downto 0);
+			data_out				: out STD_LOGIC_VECTOR(255 downto 0);
+			a0						: out unsigned(5 downto 0);
+			i_out						: out natural range 0 to 23
+        );
+end math;
+
+architecture Behavioral of math is
+
+--component single_port_ram is
+--	generic 
+--	(DATA_WIDTH : natural := 8;--32;
+--	 ADDR_WIDTH : natural := 11);
+--	port 
+--	(clk		: in std_logic;
+--	 addr		: in natural range 0 to 2**ADDR_WIDTH - 1;
+--	 data		: in std_logic_vector((DATA_WIDTH-1) downto 0);
+--	 we		: in std_logic := '1';
+--	 q			: out std_logic_vector((DATA_WIDTH -1) downto 0)
+--	 );
+--end component;
+
+--type Tstring is array (0 to hor_res-1) of std_logic_vector(31 downto 0);
+type Tstates is (idle, absorb, squeez);
+type type_1 is array (0 to 4) of unsigned(63 downto 0);
+type type_arr is array (0 to 4, 0 to 4) of unsigned(63 downto 0);
+
+type type_r is array (0 to 4, 0 to 4) of natural range 0 to 63;----------rotation
+
+type type_rc is array (0 to 23) of unsigned(63 downto 0);--------------rc coeff
+
+signal FSM_state 		: Tstates:=idle;
+signal hor_cnt			: natural range 0 to 2000 := 0;
+signal i, k			: natural range 0 to 2000 := 0;
+signal we				: STD_LOGIC := '0';
+signal data_str_out	: STD_LOGIC_VECTOR(7 downto 0);
+
+signal first			: unsigned(255 downto 0):=x"2523648240000001ba344d80000000086121000000000013bb00000000000013";
+signal second			: unsigned(255 downto 0):=x"2523648240000001ba344d80000000086121000000000013a700000000000013";
+signal res				: unsigned(63 downto 0);
+
+signal temp_2			: unsigned(7 downto 0);
+
+signal A, res_1, B, C	: type_arr;
+signal res_2, res_3	: unsigned(255 downto 0);
+signal r					: type_r;-------------------rotation
+signal RC				: type_rc;---------rc
+
+constant modulus		: unsigned(255 downto 0):=x"0000000000000000000000000000000000000000000000000000000000000010";--0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff
+
+
+
+function  Keccak  (a : type_arr; RC : unsigned) return type_arr is
+variable a1 : type_arr:=a;
+variable rc1 : unsigned(63 downto 0):=RC;
+variable b1 : type_arr:=(others=>(others=>(others=>'0')));
+variable c1 : type_1:=(others=>(others=>'0'));
+variable d1 : type_1:=(others=>(others=>'0'));
+variable r : type_r;
+begin
+r := ((0,1,62,28,27),
+		(36,44,6,55,20),
+		(3,10,43,25,39),
+		(41,45,15,21,8),
+		(18,2,61,56,14));
+		
+
+--for i in 0 to 23 loop
+---thetha------------
+	for j in 0 to 4 loop
+		c1(j):=a1(j,0) xor a1(j,1) xor a1(j,2) xor a1(j,3) xor a1(j,4);
+	end loop;
+	
+		d1(0) := c1(4) xor (c1(1) rol 1);
+		d1(1) := c1(0) xor (c1(2) rol 1);
+		d1(2) := c1(1) xor (c1(3) rol 1);
+		d1(3) := c1(2) xor (c1(4) rol 1);
+		d1(4) := c1(3) xor (c1(0) rol 1);
+
+	for k in 0 to 4 loop
+		for l in 0 to 4 loop
+			a1(k,l):=a1(k,l) xor d1(k);
+		end loop;
+	end loop;
+
+---rho-pi------------
+	for m in 0 to 4 loop
+		for n in 0 to 4 loop
+			b1(n, ((2*m+3*n) mod 5)) := a1(m,n) rol r(m,n);
+		end loop;
+	end loop;
+---chi--------------
+--	for o in 0 to 4 loop
+		for p in 0 to 4 loop
+--			a1(o,p) := b1(o,p) xor ((not b1(((o+1) mod 5) ,p)) and b1(((o+2) mod 5) ,p));
+			a1(0,p) := b1(0,p) xor ((not b1(1 ,p)) and b1(2 ,p));
+			a1(1,p) := b1(1,p) xor ((not b1(2 ,p)) and b1(3 ,p));
+			a1(2,p) := b1(2,p) xor ((not b1(3 ,p)) and b1(4 ,p));
+			a1(3,p) := b1(3,p) xor ((not b1(4 ,p)) and b1(0 ,p));
+			a1(4,p) := b1(4,p) xor ((not b1(0 ,p)) and b1(1 ,p));
+		end loop;
+--	end loop;
+---iot---------------
+	a1(0,0) := a1(0,0) xor RC;
+
+--end loop;
+
+return a1;
+
+end Keccak;
+
+begin
+
+--process(clk)
+--begin
+--if rising_edge(clk) then
+--	if data_in<=2 then
+--		first<=x"2523648240000001ba344d80000000086121000000000013bb00000000000013";
+--		second<=x"0523648240000001ba344d80000000086121000000000013cc00000000000013";
+--		temp_1 <= to_unsigned(4, 8);
+--		temp_2 <= to_unsigned(2, 8);
+--	elsif data_in>2 and data_in<=10 then
+--		first<=x"2523648240000001ba344d80000000086121000000000013bb00000000000013";
+--		second<=x"0003648240000001ba344d80000000086121000000000013cc00000000000013";
+--		temp_1 <= to_unsigned(42, 8);
+--		temp_2 <= to_unsigned(55, 8);
+--	elsif data_in>10 and data_in<=50 then
+--		first<=x"2523648240000001ba344d80000000086555000000000013bb00000000000013";
+--		second<=x"0003648240000001ba344d80000000086aaa000000000013cc00000000000013";
+--		temp_1 <= to_unsigned(14, 8);
+--		temp_2 <= to_unsigned(12, 8);
+--	elsif data_in>50 and data_in<=100  then
+--		first<=x"2523648240000001bafffd80000000086121000000000013bb00000000000013";
+--		second<=x"0003648240000001baeeed80000000086121000000000013cc00000000000013";
+--		temp_1 <= to_unsigned(74, 8);
+--		temp_2 <= to_unsigned(52, 8);
+--	else
+--		first<=x"252364824000000133344d80000000086121000000000013bb00000000000013";
+--		second<=x"000364824000000188344d80000000086121000000000013cc00000000000013";
+--		temp_1 <= to_unsigned(77, 8);
+--		temp_2 <= to_unsigned(88, 8);
+--	end if;
+	
+--	res1<=first+second;
+
+--	res1<=temp_1+temp_2;
+--end if;
+--end process;
+
+		 
+--r <= ((0,1,62,28,27),
+--		(36,44,6,55,20),
+--		(3,10,43,25,39),
+--		(41,45,15,21,8),
+--		(18,2,61,56,14));
+
+
+	  
+process(clk)
+variable c1 : type_1:=(others=>(others=>'0'));
+begin
+if rising_edge(clk) then
+
+A<=((unsigned(data_in(255 downto 192)), unsigned(data_in(191 downto 128)), unsigned(data_in(127 downto 64)), unsigned(data_in(63 downto 0)), (0=>'1',others=>'0')),
+	 ((others=>'0'), (others=>'0'), (others=>'0'), (others=>'0'), (others=>'0')),
+	 ((others=>'0'), (others=>'0'), (others=>'0'), (others=>'0'), (others=>'0')),
+	 ((others=>'0'), (others=>'0'), (others=>'0'), (others=>'0'), (others=>'0')),
+	 ((others=>'0'), (others=>'0'), (others=>'0'), (others=>'0'), (7 =>'1',others=>'0')));
+	 
+RC <= (x"0000000000000001",
+		 x"0000000000008082",
+		 x"800000000000808A",
+		 x"8000000080008000",
+		 x"000000000000808B",
+		 x"0000000080000001",
+		 x"8000000080008081",
+		 x"8000000000008009",
+		 x"000000000000008A",
+		 x"0000000000000088",
+		 x"0000000080008009",
+		 x"000000008000000A",
+		 x"000000008000808B",
+		 x"800000000000008B",
+		 x"8000000000008089",
+		 x"8000000000008003",
+		 x"8000000000008002",
+		 x"8000000000000080",
+		 x"000000000000800A",
+		 x"800000008000000A",
+		 x"8000000080008081",
+		 x"8000000000008080",
+		 x"0000000080000001",
+		 x"8000000080008008");
+		 
+case FSM_state is
+	when idle =>
+		B<=A;
+		FSM_state<=absorb;
+	when absorb =>
+		if i = 23 then
+			i<=0;
+			res_1<=B;
+			FSM_state<=squeez;
+			res_2 <= "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"&B(0,0);--(63 downto 0 => B(0,0), others=>'0');
+		else
+			i<=i+1;
+			FSM_state<=absorb;
+		end if;
+		B <= Keccak(B, RC(i));
+		i_out <= i;
+		a0 <= RC(i)(5 downto 0);
+	when squeez =>
+		if k = 2 then
+			k<=0;
+			FSM_state<=idle;
+			res_3<=res_2;
+		else
+			k<=k+1;
+			FSM_state<=squeez;
+		end if;
+		i_out <= k;
+		a0 <= RC(k)(5 downto 0);
+		res_1 <= Keccak(res_1, RC(k));
+		res_2<=res_2(191 downto 0)&res_1(0,0);
+end case;
+
+end if;
+end process;
+
+data_out<=std_logic_vector(res_3);
+	
+end Behavioral;

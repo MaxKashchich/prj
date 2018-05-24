@@ -1,0 +1,905 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2012 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions
+# and other software and tools, and its AMPP partner logic
+# functions, and any output files from any of the foregoing
+# (including device programming or simulation files), and any
+# associated documentation or information are expressly subject
+# to the terms and conditions of the Altera Program License
+# Subscription Agreement, Altera MegaCore Function License
+# Agreement, or other applicable license agreement, including,
+# without limitation, that your use is for the sole purpose of
+# programming logic devices manufactured by Altera and sold by
+# Altera or its authorized distributors.  Please refer to the
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 12.1 Internal Build 126 08/05/2012 SJ Full Version
+# Date created = 18:47:17  August 07, 2012
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		c5gt_gen2x4_mSGMDA_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CGTFD9E5F35C7
+set_global_assignment -name TOP_LEVEL_ENTITY test_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "12.1 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:19:19  MARCH 08, 2013"
+set_global_assignment -name LAST_QUARTUS_VERSION 15.1.0
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 1152
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+
+
+set_location_assignment PIN_AD29 -to cpu_resetn
+set_location_assignment PIN_AF18 -to CLKINBOT_P
+
+
+set_location_assignment PIN_AK18 -to ddr3a_a[0]
+set_location_assignment PIN_AL18 -to ddr3a_a[1]
+set_location_assignment PIN_AL16 -to ddr3a_a[10]
+set_location_assignment PIN_AM16 -to ddr3a_a[11]
+set_location_assignment PIN_AM13 -to ddr3a_a[12]
+set_location_assignment PIN_AN13 -to ddr3a_a[13]
+set_location_assignment PIN_AM18 -to ddr3a_a[2]
+set_location_assignment PIN_AN18 -to ddr3a_a[3]
+set_location_assignment PIN_AH17 -to ddr3a_a[4]
+set_location_assignment PIN_AJ17 -to ddr3a_a[5]
+set_location_assignment PIN_AK17 -to ddr3a_a[6]
+set_location_assignment PIN_AL17 -to ddr3a_a[7]
+set_location_assignment PIN_AH16 -to ddr3a_a[8]
+set_location_assignment PIN_AJ16 -to ddr3a_a[9]
+set_location_assignment PIN_AN16 -to ddr3a_ba[0]
+set_location_assignment PIN_AN17 -to ddr3a_ba[1]
+set_location_assignment PIN_AP17 -to ddr3a_ba[2]
+set_location_assignment PIN_AP15 -to ddr3a_casn
+set_location_assignment PIN_AP26 -to ddr3a_cke
+set_location_assignment PIN_AA17 -to ddr3a_clk_n
+set_location_assignment PIN_AA16 -to ddr3a_csn
+set_location_assignment PIN_AL21 -to ddr3a_dm[0]
+set_location_assignment PIN_AM24 -to ddr3a_dm[1]
+set_location_assignment PIN_AM28 -to ddr3a_dm[2]
+set_location_assignment PIN_AL27 -to ddr3a_dm[3]
+set_location_assignment PIN_AL30 -to ddr3a_dm[4]
+set_location_assignment PIN_AN19 -to ddr3a_dq[0]
+set_location_assignment PIN_AM19 -to ddr3a_dq[1]
+set_location_assignment PIN_AN22 -to ddr3a_dq[10]
+set_location_assignment PIN_AN23 -to ddr3a_dq[11]
+set_location_assignment PIN_AP24 -to ddr3a_dq[12]
+set_location_assignment PIN_AP25 -to ddr3a_dq[13]
+set_location_assignment PIN_AN26 -to ddr3a_dq[14]
+set_location_assignment PIN_AN24 -to ddr3a_dq[15]
+set_location_assignment PIN_AP27 -to ddr3a_dq[16]
+set_location_assignment PIN_AN27 -to ddr3a_dq[17]
+set_location_assignment PIN_AK22 -to ddr3a_dq[18]
+set_location_assignment PIN_AJ21 -to ddr3a_dq[19]
+set_location_assignment PIN_AP20 -to ddr3a_dq[2]
+set_location_assignment PIN_AH21 -to ddr3a_dq[20]
+set_location_assignment PIN_AH22 -to ddr3a_dq[21]
+set_location_assignment PIN_AP30 -to ddr3a_dq[22]
+set_location_assignment PIN_AN28 -to ddr3a_dq[23]
+set_location_assignment PIN_AL23 -to ddr3a_dq[24]
+set_location_assignment PIN_AK23 -to ddr3a_dq[25]
+set_location_assignment PIN_AL25 -to ddr3a_dq[26]
+set_location_assignment PIN_AM26 -to ddr3a_dq[27]
+set_location_assignment PIN_AK24 -to ddr3a_dq[28]
+set_location_assignment PIN_AJ24 -to ddr3a_dq[29]
+set_location_assignment PIN_AP21 -to ddr3a_dq[3]
+set_location_assignment PIN_AN31 -to ddr3a_dq[30]
+set_location_assignment PIN_AL28 -to ddr3a_dq[31]
+set_location_assignment PIN_AH23 -to ddr3a_dq[32]
+set_location_assignment PIN_AG23 -to ddr3a_dq[33]
+set_location_assignment PIN_AN32 -to ddr3a_dq[34]
+set_location_assignment PIN_AN29 -to ddr3a_dq[35]
+set_location_assignment PIN_AK25 -to ddr3a_dq[36]
+set_location_assignment PIN_AJ25 -to ddr3a_dq[37]
+set_location_assignment PIN_AK28 -to ddr3a_dq[38]
+set_location_assignment PIN_AM30 -to ddr3a_dq[39]
+set_location_assignment PIN_AH19 -to ddr3a_dq[4]
+set_location_assignment PIN_AG19 -to ddr3a_dq[5]
+set_location_assignment PIN_AJ19 -to ddr3a_dq[6]
+set_location_assignment PIN_AM21 -to ddr3a_dq[7]
+set_location_assignment PIN_AM20 -to ddr3a_dq[8]
+set_location_assignment PIN_AL20 -to ddr3a_dq[9]
+set_location_assignment PIN_AB19 -to ddr3a_dqs_p[0]
+set_location_assignment PIN_AD19 -to ddr3a_dqs_p[1]
+set_location_assignment PIN_AJ20 -to ddr3a_dqs_p[2]
+set_location_assignment PIN_Y20 -to ddr3a_dqs_p[3]
+set_location_assignment PIN_AC21 -to ddr3a_dqs_p[4]
+set_location_assignment PIN_AN21 -to ddr3a_odt
+set_location_assignment PIN_AP14 -to ddr3a_rasn
+set_location_assignment PIN_AJ22 -to ddr3a_resetn
+set_location_assignment PIN_AN12 -to ddr3a_wen
+set_location_assignment PIN_H29 -to ddr3b_a[0]
+set_location_assignment PIN_K28 -to ddr3b_a[1]
+set_location_assignment PIN_V33 -to ddr3b_a[10]
+set_location_assignment PIN_U33 -to ddr3b_a[11]
+set_location_assignment PIN_T31 -to ddr3b_a[12]
+set_location_assignment PIN_T30 -to ddr3b_a[13]
+set_location_assignment PIN_K34 -to ddr3b_a[2]
+set_location_assignment PIN_L32 -to ddr3b_a[3]
+set_location_assignment PIN_R32 -to ddr3b_a[4]
+set_location_assignment PIN_R33 -to ddr3b_a[5]
+set_location_assignment PIN_N32 -to ddr3b_a[6]
+set_location_assignment PIN_G33 -to ddr3b_a[7]
+set_location_assignment PIN_AE34 -to ddr3b_a[8]
+set_location_assignment PIN_L27 -to ddr3b_a[9]
+set_location_assignment PIN_J31 -to ddr3b_ba[0]
+set_location_assignment PIN_N29 -to ddr3b_ba[1]
+set_location_assignment PIN_P27 -to ddr3b_ba[2]
+set_location_assignment PIN_N27 -to ddr3b_casn
+set_location_assignment PIN_AF32 -to ddr3b_cke
+set_location_assignment PIN_R29 -to ddr3b_clk_n
+set_location_assignment PIN_R30 -to ddr3b_clk_p
+set_location_assignment PIN_V27 -to ddr3b_csn
+set_location_assignment PIN_AE30 -to ddr3b_dm[0]
+set_location_assignment PIN_AE32 -to ddr3b_dm[1]
+set_location_assignment PIN_AC34 -to ddr3b_dm[2]
+set_location_assignment PIN_W34 -to ddr3b_dm[3]
+set_location_assignment PIN_M33 -to ddr3b_dm[4]
+set_location_assignment PIN_K32 -to ddr3b_dm[5]
+set_location_assignment PIN_L31 -to ddr3b_dm[6]
+set_location_assignment PIN_H28 -to ddr3b_dm[7]
+set_location_assignment PIN_AF31 -to ddr3b_dq[0]
+set_location_assignment PIN_AD30 -to ddr3b_dq[1]
+set_location_assignment PIN_AB31 -to ddr3b_dq[10]
+set_location_assignment PIN_AJ34 -to ddr3b_dq[11]
+set_location_assignment PIN_AA31 -to ddr3b_dq[12]
+set_location_assignment PIN_AK34 -to ddr3b_dq[13]
+set_location_assignment PIN_W31 -to ddr3b_dq[14]
+set_location_assignment PIN_AG33 -to ddr3b_dq[15]
+set_location_assignment PIN_AD34 -to ddr3b_dq[16]
+set_location_assignment PIN_AC33 -to ddr3b_dq[17]
+set_location_assignment PIN_AG34 -to ddr3b_dq[18]
+set_location_assignment PIN_AB33 -to ddr3b_dq[19]
+set_location_assignment PIN_AJ32 -to ddr3b_dq[2]
+set_location_assignment PIN_AE33 -to ddr3b_dq[20]
+set_location_assignment PIN_V32 -to ddr3b_dq[21]
+set_location_assignment PIN_AH34 -to ddr3b_dq[22]
+set_location_assignment PIN_W32 -to ddr3b_dq[23]
+set_location_assignment PIN_U29 -to ddr3b_dq[24]
+set_location_assignment PIN_V34 -to ddr3b_dq[25]
+set_location_assignment PIN_U34 -to ddr3b_dq[26]
+set_location_assignment PIN_AA33 -to ddr3b_dq[27]
+set_location_assignment PIN_R34 -to ddr3b_dq[28]
+set_location_assignment PIN_Y33 -to ddr3b_dq[29]
+set_location_assignment PIN_AC31 -to ddr3b_dq[3]
+set_location_assignment PIN_P34 -to ddr3b_dq[30]
+set_location_assignment PIN_U28 -to ddr3b_dq[31]
+set_location_assignment PIN_T32 -to ddr3b_dq[32]
+set_location_assignment PIN_N33 -to ddr3b_dq[33]
+set_location_assignment PIN_T33 -to ddr3b_dq[34]
+set_location_assignment PIN_L33 -to ddr3b_dq[35]
+set_location_assignment PIN_T28 -to ddr3b_dq[36]
+set_location_assignment PIN_J34 -to ddr3b_dq[37]
+set_location_assignment PIN_T27 -to ddr3b_dq[38]
+set_location_assignment PIN_M34 -to ddr3b_dq[39]
+set_location_assignment PIN_AH32 -to ddr3b_dq[4]
+set_location_assignment PIN_K33 -to ddr3b_dq[40]
+set_location_assignment PIN_N31 -to ddr3b_dq[41]
+set_location_assignment PIN_G34 -to ddr3b_dq[42]
+set_location_assignment PIN_R28 -to ddr3b_dq[43]
+set_location_assignment PIN_H33 -to ddr3b_dq[44]
+set_location_assignment PIN_P32 -to ddr3b_dq[45]
+set_location_assignment PIN_H34 -to ddr3b_dq[46]
+set_location_assignment PIN_R27 -to ddr3b_dq[47]
+set_location_assignment PIN_N28 -to ddr3b_dq[48]
+set_location_assignment PIN_L30 -to ddr3b_dq[49]
+set_location_assignment PIN_Y28 -to ddr3b_dq[5]
+set_location_assignment PIN_P30 -to ddr3b_dq[50]
+set_location_assignment PIN_K30 -to ddr3b_dq[51]
+set_location_assignment PIN_J32 -to ddr3b_dq[52]
+set_location_assignment PIN_H32 -to ddr3b_dq[53]
+set_location_assignment PIN_M31 -to ddr3b_dq[54]
+set_location_assignment PIN_H31 -to ddr3b_dq[55]
+set_location_assignment PIN_G30 -to ddr3b_dq[56]
+set_location_assignment PIN_K29 -to ddr3b_dq[57]
+set_location_assignment PIN_G31 -to ddr3b_dq[58]
+set_location_assignment PIN_M30 -to ddr3b_dq[59]
+set_location_assignment PIN_AN34 -to ddr3b_dq[6]
+set_location_assignment PIN_J30 -to ddr3b_dq[60]
+set_location_assignment PIN_M29 -to ddr3b_dq[61]
+set_location_assignment PIN_J29 -to ddr3b_dq[62]
+set_location_assignment PIN_L28 -to ddr3b_dq[63]
+set_location_assignment PIN_Y27 -to ddr3b_dq[7]
+set_location_assignment PIN_AD32 -to ddr3b_dq[8]
+set_location_assignment PIN_AH33 -to ddr3b_dq[9]
+set_location_assignment PIN_Y30 -to ddr3b_dqs_n[0]
+set_location_assignment PIN_W30 -to ddr3b_dqs_n[1]
+set_location_assignment PIN_V23 -to ddr3b_dqs_n[2]
+set_location_assignment PIN_U25 -to ddr3b_dqs_n[3]
+set_location_assignment PIN_T23 -to ddr3b_dqs_n[4]
+set_location_assignment PIN_R25 -to ddr3b_dqs_n[5]
+set_location_assignment PIN_R24 -to ddr3b_dqs_n[6]
+set_location_assignment PIN_P25 -to ddr3b_dqs_n[7]
+set_location_assignment PIN_Y29 -to ddr3b_dqs_p[0]
+set_location_assignment PIN_W29 -to ddr3b_dqs_p[1]
+set_location_assignment PIN_V24 -to ddr3b_dqs_p[2]
+set_location_assignment PIN_U24 -to ddr3b_dqs_p[3]
+set_location_assignment PIN_U23 -to ddr3b_dqs_p[4]
+set_location_assignment PIN_T25 -to ddr3b_dqs_p[5]
+set_location_assignment PIN_R23 -to ddr3b_dqs_p[6]
+set_location_assignment PIN_P24 -to ddr3b_dqs_p[7]
+set_location_assignment PIN_AA32 -to ddr3b_odt
+set_location_assignment PIN_Y32 -to ddr3b_rasn
+set_location_assignment PIN_AG31 -to ddr3b_resetn
+set_location_assignment PIN_AM34 -to ddr3b_wen
+
+set_location_assignment PIN_AP12 -to ddr3a_hmc_gnd[0]
+set_location_assignment PIN_AP16 -to ddr3a_hmc_gnd[1]
+set_location_assignment PIN_AB20 -to ddr3a_hmc_gnd[2]
+set_location_assignment PIN_AB21 -to ddr3a_hmc_gnd[3]
+set_location_assignment PIN_AG21 -to ddr3a_hmc_gnd[4]
+set_location_assignment PIN_AF22 -to ddr3a_hmc_gnd[5]
+set_location_assignment PIN_AF23 -to ddr3a_hmc_gnd[6]
+set_location_assignment PIN_AE23 -to ddr3a_hmc_gnd[7]
+set_location_assignment PIN_AP22 -to ddr3a_hmc_gnd[8]
+set_location_assignment PIN_AL22 -to ddr3a_hmc_gnd[9]
+set_location_assignment PIN_AM25 -to ddr3a_hmc_gnd[10]
+set_location_assignment PIN_AL26 -to ddr3a_hmc_gnd[11]
+set_location_assignment PIN_AP31 -to ddr3a_hmc_gnd[12]
+set_location_assignment PIN_AP32 -to ddr3a_hmc_gnd[13]
+set_location_assignment PIN_AM29 -to ddr3a_hmc_gnd[14]
+set_location_assignment PIN_AK27 -to ddr3a_hmc_gnd[15]
+set_location_assignment PIN_AP29 -to ddr3a_hmc_gnd[16]
+
+set_location_assignment PIN_AA22 -to pcie_perstn
+set_location_assignment PIN_AP5 -to pcie_smbclk
+set_location_assignment PIN_AJ12 -to pcie_smbdat
+set_location_assignment PIN_AP6 -to pcie_waken
+
+
+
+
+
+######## Ethernet Signals ################
+
+
+########## Flash/MAX Signals ################
+
+
+########## USB Blaster II Signals ################
+
+########## User Signals ################
+
+
+
+
+########## PCIe Signals ################
+
+
+
+
+set_location_assignment PIN_AC19 -to ddr3a_dqs_n[0]
+set_location_assignment PIN_AE19 -to ddr3a_dqs_n[1]
+set_location_assignment PIN_AK20 -to ddr3a_dqs_n[2]
+set_location_assignment PIN_AA20 -to ddr3a_dqs_n[3]
+set_location_assignment PIN_AD21 -to ddr3a_dqs_n[4]
+set_location_assignment PIN_H19 -to clkintop_p
+set_location_assignment PIN_AF18 -to clkinbot_p
+set_location_assignment PIN_W26 -to clkin_r_p
+set_location_assignment PIN_V28 -to clkin_50
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE PARALLEL X16"
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN ON
+set_global_assignment -name ON_CHIP_BITSTREAM_DECOMPRESSION OFF
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_location_assignment PIN_AA18 -to ddr3a_clk_p
+
+
+#-------------------Config----------------------------------#
+
+#----------------HSMA--------------------------------------#
+
+#----------------HSMB--------------------------------------#
+
+#----------------PCIE--------------------------------------#
+set_location_assignment PIN_AK19 -to pcie_led_x[1]
+set_location_assignment PIN_AD22 -to pcie_led_x[4]
+set_location_assignment PIN_W11 -to pcie_refclk_p
+set_location_assignment PIN_AJ2 -to pcie_rx_p[0]
+set_location_assignment PIN_AG2 -to pcie_rx_p[1]
+set_location_assignment PIN_AE2 -to pcie_rx_p[2]
+set_location_assignment PIN_AC2 -to pcie_rx_p[3]
+set_location_assignment PIN_AH4 -to pcie_tx_p[0]
+set_location_assignment PIN_AF4 -to pcie_tx_p[1]
+set_location_assignment PIN_AD4 -to pcie_tx_p[2]
+set_location_assignment PIN_AB4 -to pcie_tx_p[3]
+set_location_assignment PIN_AP19 -to rzqin_1_5v
+
+#------------USER IO------------------------------#
+set_location_assignment PIN_AM23 -to user_led[0]
+set_location_assignment PIN_AE25 -to user_led[1]
+set_location_assignment PIN_AK29 -to user_led[2]
+set_location_assignment PIN_AL31 -to user_led[3]
+set_location_assignment PIN_AF25 -to user_led[4]
+set_location_assignment PIN_AJ27 -to user_led[5]
+set_location_assignment PIN_AC22 -to user_led[6]
+set_location_assignment PIN_AH27 -to user_led[7]
+
+#---------------Other---------------------------------------------#
+set_location_assignment PIN_W27 -to "clkin_r_p(n)"
+set_location_assignment PIN_AG18 -to "clkinbot_p(n)"
+set_location_assignment PIN_H18 -to "clkintop_p(n)"
+set_global_assignment -name SEARCH_PATH output_files/ -tag from_archive
+set_location_assignment PIN_U31 -to CLK_125_P
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name USE_CHECKSUM_AS_USERCODE ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_100MHZ
+set_global_assignment -name SDC_FILE top.sdc
+set_global_assignment -name VERILOG_FILE c5gt_pcie_gen2x4.v
+set_global_assignment -name OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS ON
+set_global_assignment -name OPTIMIZE_POWER_DURING_SYNTHESIS OFF
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name OPTIMIZE_POWER_DURING_FITTING OFF
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name UNIPHY_SEQUENCER_DQS_CONFIG_ENABLE ON
+set_global_assignment -name ECO_REGENERATE_REPORT ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
+set_global_assignment -name SEED 100
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
+set_global_assignment -name USE_DLL_FREQUENCY_FOR_DQS_DELAY_CHAIN ON
+set_global_assignment -name VHDL_FILE math.vhd
+set_location_assignment PIN_A2 -to data_in[7]
+set_location_assignment PIN_H17 -to clk
+set_global_assignment -name VHDL_FILE USB_rec.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform_math.vwf
+set_global_assignment -name VHDL_FILE math_tb.vhd
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH math_tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME math_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id math_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME math_tb -section_id math_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE math_tb.vhd -section_id math_tb
+set_global_assignment -name ENABLE_IP_DEBUG OFF
+set_global_assignment -name PARALLEL_SYNTHESIS ON
+set_global_assignment -name DSP_BLOCK_BALANCING AUTO
+set_global_assignment -name STRATIXII_CARRY_CHAIN_LENGTH 200
+set_global_assignment -name SYNCHRONIZATION_REGISTER_CHAIN_LENGTH 3
+set_global_assignment -name BLOCK_DESIGN_NAMING AUTO
+set_global_assignment -name AUTO_PARALLEL_SYNTHESIS ON
+set_global_assignment -name VHDL_FILE test_top.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name IO_STANDARD LVDS -to CLKINBOT_P
+set_instance_assignment -name IO_STANDARD "SSTL-15" -to rzqin_1_5v -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "1.8 V" -to cpu_resetn
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[0]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[1]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[2]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[3]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[4]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[5]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[6]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[7]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[8]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[9]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[10]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[11]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[12]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[13]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[14]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[15]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd[16]
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to pcie_rx_p[0]
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to pcie_rx_p[1]
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to pcie_rx_p[2]
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to pcie_rx_p[3]
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to pcie_tx_p[0]
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to pcie_tx_p[1]
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to pcie_tx_p[3]
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to pcie_refclk_p
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to pcie_rx_p
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to pcie_tx_p
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pcie_perstn
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pcie_smbclk
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pcie_smbdat
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pcie_waken
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_a[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_a[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_a[10] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_a[11] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_a[12] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_a[13]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_a[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_a[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_a[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_a[5] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_a[6] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_a[7] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_a[8] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_a[9] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_ba[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_ba[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_ba[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_casn -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3a_clk_n -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3a_clk_p -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_csn -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_rasn -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_wen -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_cke -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dm[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dm[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dm[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dm[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dm[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[10] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[11] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[12] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[13] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[14] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[15] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[16] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[17] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[18] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[19] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[20] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[21] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[22] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[23] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[24] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[25] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[26] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[27] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[28] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[29] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[30] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[31] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[32] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[33] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[34] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[35] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[36] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[37] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[38] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[39] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[5] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[6] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[7] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[8] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_dq[9] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3a_dqs_p[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3a_dqs_p[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3a_dqs_p[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3a_dqs_p[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3a_dqs_p[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3a_odt -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD 1.5V -to ddr3a_resetn -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3b_a[13]
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3a_dqs_n[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3a_dqs_n[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3a_dqs_n[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3a_dqs_n[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3a_dqs_n[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name IO_STANDARD LVDS -to clkintop_p
+set_instance_assignment -name IO_STANDARD LVDS -to clkinbot_p
+set_instance_assignment -name IO_STANDARD LVDS -to clkin_r_p
+set_instance_assignment -name IO_STANDARD "1.5 V" -to clkin_50
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3a_hmc_gnd
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led[0]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led[1]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led[2]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led[3]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led[4]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led[5]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led[6]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led[7]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to pcie_led_x[1]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to pcie_led_x[4]
+set_instance_assignment -name IO_STANDARD LVDS -to CLK_125_P
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[5] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[6] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[7] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[8] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[9] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[10] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[11] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[12] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[13] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[14] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[15] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[16] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[17] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[18] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[19] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[20] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[21] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[22] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[23] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[24] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[25] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[26] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[27] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[28] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[29] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[30] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[31] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[32] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[33] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[34] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[35] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[36] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[37] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[38] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[39] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[40] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[41] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[42] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[43] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[44] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[45] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[46] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[47] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[48] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[49] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[50] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[51] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[52] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[53] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[54] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[55] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[56] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[57] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[58] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[59] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[60] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[61] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[62] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dq[63] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dm[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dm[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dm[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dm[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dm[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dm[5] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dm[6] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dm[7] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dqs_p[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dqs_p[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dqs_p[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dqs_p[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dqs_p[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dqs_p[5] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dqs_p[6] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dqs_p[7] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dqs_n[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dqs_n[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dqs_n[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dqs_n[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dqs_n[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dqs_n[5] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dqs_n[6] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_dqs_n[7] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_a[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_a[10] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_a[11] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_a[12] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_a[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_a[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_a[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_a[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_a[5] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_a[6] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_a[7] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_a[8] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_a[9] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_ba[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_ba[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_ba[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_csn -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_wen -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_rasn -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_casn -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_odt -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_cke -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_resetn -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_clk_p -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3b_clk_n -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to u0|mem_if_ddr3_emif_0|pll0|pll_afi_clk -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem_if_ddr3_emif_0|pll0|pll_addr_cmd_clk -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem_if_ddr3_emif_0|pll0|pll_avl_clk -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to u0|mem_if_ddr3_emif_0|pll0|pll_config_clk -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|ureset|phy_reset_mem_stable_n -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|ureset|phy_reset_n -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|s0|sequencer_rw_mgr_inst|rw_mgr_inst|rw_mgr_core_inst|rw_soft_reset_n -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[5] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[5] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[6] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[6] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[7] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[7] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name ENABLE_BENEFICIAL_SKEW_OPTIMIZATION_FOR_NON_GLOBAL_CLOCKS ON -to u0|mem_if_ddr3_emif_0 -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PLL_COMPENSATION_MODE DIRECT -to u0|mem_if_ddr3_emif_0|pll0|fbout -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[5] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[5] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[6] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[6] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[7] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[7] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[8] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[8] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[9] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[9] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[10] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[10] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[11] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[11] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[12] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[12] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[13] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[13] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[14] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[14] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[15] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[15] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[16] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[16] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[17] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[17] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[18] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[18] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[19] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[19] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[20] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[20] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[21] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[21] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[22] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[22] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[23] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[23] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[24] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[24] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[25] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[25] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[26] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[26] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[27] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[27] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[28] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[28] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[29] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[29] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[30] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[30] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[31] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[31] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[32] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[32] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[33] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[33] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[34] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[34] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[35] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[35] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[36] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[36] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[37] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[37] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[38] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[38] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dq[39] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dq[39] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dqs_p[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dqs_p[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dqs_p[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dqs_p[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dqs_p[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dqs_p[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dqs_p[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dqs_p[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dqs_p[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dqs_p[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dqs_n[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dqs_n[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dqs_n[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dqs_n[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dqs_n[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dqs_n[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dqs_n[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dqs_n[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to ddr3a_dqs_n[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dqs_n[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITHOUT CALIBRATION" -to ddr3a_clk_p -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITHOUT CALIBRATION" -to ddr3a_clk_n -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_a[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_a[10] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_a[11] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_a[12] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_a[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_a[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_a[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_a[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_a[5] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_a[6] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_a[7] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_a[8] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_a[9] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_ba[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_ba[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_ba[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_casn -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_cke -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_csn -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_odt -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_rasn -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_wen -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3a_resetn -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dm[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dm[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dm[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dm[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to ddr3a_dm[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[5] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[6] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[7] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[8] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[9] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[10] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[11] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[12] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[13] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[14] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[15] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[16] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[17] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[18] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[19] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[20] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[21] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[22] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[23] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[24] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[25] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[26] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[27] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[28] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[29] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[30] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[31] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[32] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[33] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[34] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[35] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[36] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[37] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[38] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dq[39] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dm[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dm[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dm[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dm[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dm[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dqs_p[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dqs_p[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dqs_p[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dqs_p[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dqs_p[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dqs_n[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dqs_n[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dqs_n[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dqs_n[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_dqs_n[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_a[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_a[10] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_a[11] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_a[12] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_a[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_a[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_a[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_a[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_a[5] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_a[6] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_a[7] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_a[8] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_a[9] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_ba[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_ba[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_ba[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_casn -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_cke -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_csn -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_odt -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_rasn -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_wen -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_resetn -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_clk_p -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to ddr3a_clk_n -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uio_pads|dq_ddio[0].read_capture_clk_buffer -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uio_pads|dq_ddio[1].read_capture_clk_buffer -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uio_pads|dq_ddio[2].read_capture_clk_buffer -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uio_pads|dq_ddio[3].read_capture_clk_buffer -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|mem_if_ddr3_emif_0|p0|umemphy|uio_pads|dq_ddio[4].read_capture_clk_buffer -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 4 -to ddr3a_dqs_p[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D6_DELAY 0 -to ddr3a_dqs_p[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 4 -to ddr3a_dqs_p[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D6_DELAY 0 -to ddr3a_dqs_p[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 4 -to ddr3a_dqs_p[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D6_DELAY 0 -to ddr3a_dqs_p[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 4 -to ddr3a_dqs_p[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D6_DELAY 0 -to ddr3a_dqs_p[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 4 -to ddr3a_dqs_p[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D6_DELAY 0 -to ddr3a_dqs_p[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 4 -to ddr3a_dqs_n[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D6_DELAY 0 -to ddr3a_dqs_n[0] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 4 -to ddr3a_dqs_n[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D6_DELAY 0 -to ddr3a_dqs_n[1] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 4 -to ddr3a_dqs_n[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D6_DELAY 0 -to ddr3a_dqs_n[2] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 4 -to ddr3a_dqs_n[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D6_DELAY 0 -to ddr3a_dqs_n[3] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 4 -to ddr3a_dqs_n[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D6_DELAY 0 -to ddr3a_dqs_n[4] -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 2 -to ddr3a_clk_p -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name D5_DELAY 2 -to ddr3a_clk_n -tag __q_sys_mem_if_ddr3_emif_0_p0
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,0 +1,99 @@
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
+
+entity math is
+	Port (clk					: in  STD_LOGIC;
+			data_in				: in  unsigned(31 downto 0);
+			data_out				: out STD_LOGIC_VECTOR(255 downto 0)
+        );
+end math;
+
+architecture Behavioral of math is
+
+--component single_port_ram is
+--	generic 
+--	(DATA_WIDTH : natural := 8;--32;
+--	 ADDR_WIDTH : natural := 11);
+--	port 
+--	(clk		: in std_logic;
+--	 addr		: in natural range 0 to 2**ADDR_WIDTH - 1;
+--	 data		: in std_logic_vector((DATA_WIDTH-1) downto 0);
+--	 we		: in std_logic := '1';
+--	 q			: out std_logic_vector((DATA_WIDTH -1) downto 0)
+--	 );
+--end component;
+
+--type Tstring is array (0 to hor_res-1) of std_logic_vector(31 downto 0);
+type Tstates is (reading, writing, idle);
+
+signal FSM_state 		: Tstates:=reading;
+signal hor_cnt			: natural range 0 to 2000 := 0;
+
+signal we				: STD_LOGIC := '0';
+signal data_str_out	: STD_LOGIC_VECTOR(7 downto 0);
+
+signal first			: unsigned(255 downto 0):=x"2523648240000001ba344d80000000086121000000000013bb00000000000013";
+signal second			: unsigned(255 downto 0):=x"2523648240000001ba344d80000000086121000000000013a700000000000013";
+signal res				: unsigned(255 downto 0);
+signal res1				: unsigned(255 downto 0);
+signal temp				: unsigned(255 downto 0);
+constant modulus			: unsigned(255 downto 0):=x"0000000000000000000000000000000000000000000000000000000000000010";--0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff
+
+
+function  divide  (a : UNSIGNED; b : UNSIGNED) return UNSIGNED is
+variable a1 : unsigned(255 downto 0):=a;
+variable b1 : unsigned(255 downto 0):=b;
+variable p1 : unsigned(256 downto 0):= (others => '0');
+variable i : integer:=0;
+
+begin
+for i in 0 to b'length-1 loop
+p1(b'length-1 downto 1) := p1(b'length-2 downto 0);
+p1(0) := a1(a'length-1);
+a1(a'length-1 downto 1) := a1(a'length-2 downto 0);
+p1 := p1-b1;
+if(p1(b'length-1) ='1') then
+a1(0) :='0';
+p1 := p1+b1;
+else
+a1(0) :='1';
+end if;
+end loop;
+return a1;
+
+end divide;
+
+begin
+
+process(clk)
+begin
+if rising_edge(clk) then
+	if data_in<=2 then
+		first<=x"2523648240000001ba344d80000000086121000000000013bb00000000000013";
+		second<=x"0523648240000001ba344d80000000086121000000000013cc00000000000013";
+	elsif data_in>2 and data_in<=10 then
+		first<=x"2523648240000001ba344d80000000086121000000000013bb00000000000013";
+		second<=x"0003648240000001ba344d80000000086121000000000013cc00000000000013";
+	elsif data_in>10 and data_in<=50 then
+		first<=x"2523648240000001ba344d80000000086555000000000013bb00000000000013";
+		second<=x"0003648240000001ba344d80000000086aaa000000000013cc00000000000013";
+	elsif data_in>50 and data_in<=100  then
+		first<=x"2523648240000001bafffd80000000086121000000000013bb00000000000013";
+		second<=x"0003648240000001baeeed80000000086121000000000013cc00000000000013";
+	else
+		first<=x"252364824000000133344d80000000086121000000000013bb00000000000013";
+		second<=x"000364824000000188344d80000000086121000000000013cc00000000000013";
+	end if;
+	
+	res1<=divide(first,second);
+	data_out <= STD_LOGIC_VECTOR(res1);
+
+end if;
+end process;
+
+
+
+
+end Behavioral;

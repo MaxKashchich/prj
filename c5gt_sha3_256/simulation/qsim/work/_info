@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/mkashchych/Downloads/c5gt_math_test_copy/simulation/qsim
+vmath
+Z1 !s110 1522139518
+!i10b 1
+!s100 e<Q8^J^_P680zA5Ed03TR3
+Ij2?5<[SKn<1IgcD=ACDLU3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1522139517
+8c5gt_gen2x4_mSGMDA.vo
+Fc5gt_gen2x4_mSGMDA.vo
+L0 32
+Z3 OV;L;10.4b;61
+r1
+!s85 0
+31
+!s108 1522139517.000000
+!s107 c5gt_gen2x4_mSGMDA.vo|
+!s90 -work|work|c5gt_gen2x4_mSGMDA.vo|
+!i113 1
+Z4 o-work work
+vmath_vlg_vec_tst
+R1
+!i10b 1
+!s100 A?H3U^F4F6<:UK@U3f@Uo0
+Ic[F]g[6?<M>UE7D=?Xlh<1
+R2
+R0
+w1522139512
+8Waveform_math.vwf.vt
+FWaveform_math.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+!s108 1522139518.000000
+!s107 Waveform_math.vwf.vt|
+!s90 -work|work|Waveform_math.vwf.vt|
+!i113 1
+R4

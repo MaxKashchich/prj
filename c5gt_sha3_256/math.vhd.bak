@@ -1,0 +1,62 @@
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
+
+entity math is
+	Port (clk					: in  STD_LOGIC;
+			data_in				: in  STD_LOGIC_VECTOR(7 downto 0);
+			data_out				: out STD_LOGIC_VECTOR(255 downto 0);
+			fifo_in_read		: out STD_LOGIC;
+			fifo_out_wr			: out STD_LOGIC;
+			fifo_in_empty		: in STD_LOGIC;
+			fifo_out_full		: in STD_LOGIC;
+			ZOOM_CONT_EN		: in STD_LOGIC;
+			ZOOM_CONT_DONE 	: out STD_LOGIC:='0';
+			ZOOM_CONT			: in natural;
+			test					: out natural
+        );
+end math;
+
+architecture Behavioral of math is
+
+component single_port_ram is
+	generic 
+	(DATA_WIDTH : natural := 8;--32;
+	 ADDR_WIDTH : natural := 11);
+	port 
+	(clk		: in std_logic;
+	 addr		: in natural range 0 to 2**ADDR_WIDTH - 1;
+	 data		: in std_logic_vector((DATA_WIDTH-1) downto 0);
+	 we		: in std_logic := '1';
+	 q			: out std_logic_vector((DATA_WIDTH -1) downto 0)
+	 );
+end component;
+
+--type Tstring is array (0 to hor_res-1) of std_logic_vector(31 downto 0);
+type Tstates is (reading, writing, idle);
+
+signal FSM_state 		: Tstates:=reading;
+signal hor_cnt			: natural range 0 to 2000 := 0;
+
+signal we				: STD_LOGIC := '0';
+signal data_str_out	: STD_LOGIC_VECTOR(7 downto 0);
+
+signal first			: unsigned(255 downto 0):=(others=>'1');
+signal second			: unsigned(255 downto 0):=x"2523648240000001ba344d80000000086121000000000013a700000000000013";
+signal res				: unsigned(255 downto 0);
+
+
+begin
+
+process(clk)
+begin
+if rising_edge(clk) then
+	res<=first+second;
+	data_out <= STD_LOGIC_VECTOR(res);	
+end if;
+end process;
+
+
+
+end Behavioral;
